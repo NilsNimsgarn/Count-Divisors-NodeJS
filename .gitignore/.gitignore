@@ -1,0 +1,24 @@
+process.stdin.resume();
+process.stdin.setEncoding("utf-8");
+var stdin_input = "";
+process.stdin.on("data", function (input) {
+    stdin_input += input; 
+});
+process.stdin.on("end", function () {
+   main(stdin_input);
+});
+function main(input) {
+    var res=input.split(" ");// res wird zum Array
+    var z1=Number(res[0]);
+    var z2=Number(res[1])+1;
+    var div=Number(res[2]);
+    var erg=0;
+for(z1;z1<z2;z1++)
+{
+   if(z1%div===0)
+   {
+       erg=erg+1;
+   }
+}
+ console.log(erg);
+}
